@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>TODO App</h1>
+
+  <input id="taskInput" placeholder="New task">
+  <button onclick="addTask()">Add</button>
+
+  <br><br>
+  <input id="search" placeholder="Search" oninput="render()">
+
+  <br><br>
+  <select id="statusFilter" onchange="render()">
+    <option value="all">All</option>
+    <option value="done">Done</option>
+    <option value="undone">Undone</option>
+  </select>
+
+  <select id="sortDir" onchange="render()">
+    <option value="asc">Priority up</option>
+    <option value="desc">Priority down</option>
+  </select>
+
+  <div id="list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
